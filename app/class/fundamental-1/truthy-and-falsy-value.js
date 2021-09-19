@@ -22,7 +22,7 @@ if (salary){
 
 let height = 0;
 
-if (height){  // height = 0 . is a valid value it is defined some-times
+if (height){  // height = 0 . is a valid value it is defined some-times but this takes to bug also
   console.log('YEH HEY... height is defined');
 }else {
   console.log('Height is undefined');
