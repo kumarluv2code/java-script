@@ -96,7 +96,7 @@ nav {
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 1s;
 }
 
@@ -311,10 +311,13 @@ h2 {
       border: none;
 		}
   .error{
-			color: #D8000C;
-      float: left;
-      margin-right: 10px;
-      margin-top: -5px;
-      font-weight: bold;
-      font-size: large;
+		color: #D8000C;
+    margin-right: 142px;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: large;
+    float: right;
+    display: block;
+    padding: 5px;
+    width: 16rem;
 		}

@@ -145,24 +145,20 @@ btnLogin.addEventListener('click', (event) => {
   })
   
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    debugger
-    isvalidUser = `USER LOGIN SUCCESS`;
+    labelWelcome.textContent = `Welcome back ${currentAccount.owner.split(' ')[0]}`
+    containerApp.style.opacity = 100;
   } else {
-    debugger
-      isvalidUser = `INVALID USER`;
+    isvalidUser = `INVALID USER`;
   }
 
   //display error message
-  if (isvalidUser == `USER LOGIN SUCCESS`) {
-    debugger
-    console.log('1');
-    const html = `<div class="success">USER LOGIN SUCCESS</div>`
-    inputLoginUsername.insertAdjacentHTML('afterend', html);
-  } else if(isvalidUser === `INVALID USER`){
+ if(isvalidUser === `INVALID USER`){
     console.log('2')
-    const html = `<span class="error">INVALID USER</span>`
-    inputLoginUsername.insertAdjacentHTML('afterend', html);
-    errorMessage
+    const html = `INVALID USER`
+   errorMessage.innerHTML = html
+   setTimeout(() => {
+     errorMessage.innerHTML = ''
+   },5000)
   }
 })
 
